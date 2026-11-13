@@ -458,3 +458,14 @@ COLOR (regla permanente de la subfamilia — siempre se cambia):
   sobre fondo oscuro, badges, bordes de hover, sombras de botones)
   recalculados a la misma paleta, mismo contraste que antes.
 - Isotipo (assets/isotipo.svg) recoloreado a juego.
+
+BLOG (/blog):
+- Los artículos NO viven en este repositorio: los genera y publica el agente
+  SEO de Kelatos (Agentes V2 → organización «PozueloTech», clave pozuelotech)
+  y se leen en vivo de la API pública de Kelatos, sin token:
+  https://db.affirmatechnology.com/kelatos-api/publico/blog?org=pozuelotech
+- api/blog.js + lib/blog.js generan /blog y /blog/<slug> en el servidor.
+- api/sitemap.js genera /sitemap.xml (se eliminó el sitemap.xml estático).
+- Estilos en assets/blog.css. Enlace «Blog» en el menú (escritorio y móvil) y en el pie.
+  Menú hamburguesa hasta 1260px (assets/styles.css) para que el menú no se parta.
+- vercel.json redirige a la home las URLs antiguas; el blog queda fuera.
